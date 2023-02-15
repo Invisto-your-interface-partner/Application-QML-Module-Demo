@@ -8,11 +8,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.2 COMPONENTS Quick Gui REQUIRED)
 
-qt_add_executable(myapp
+qt_add_executable(demo_app
     main.cpp
 )
 
-qt_add_qml_module(myapp
+qt_add_qml_module(demo_app
     URI hello
     VERSION 1.0
     QML_FILES
@@ -22,4 +22,4 @@ qt_add_qml_module(myapp
         images/Invisto-Logo.svg
 )
 
-target_link_libraries(myapp PRIVATE Qt6::Gui Qt6::Quick)
+target_link_libraries(demo_app PRIVATE Qt6::Gui Qt6::Quick)
